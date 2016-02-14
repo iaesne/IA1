@@ -1,6 +1,16 @@
 package environment;
 
+import pathfinding.HeuristicStrategy;
+
 public class App {
+	
+	// Implementar heuristicas manhattan, chebyshev y euclidea
+	// Ejemplo de implementacion de la interfaz heuristica con una funcion lambda que devuelve coste 0.0
+	public final static HeuristicStrategy manhattan = (start,end) -> 0.0;
+	
+	public final static HeuristicStrategy chebyshev = (start,end) -> 0.0;
+	
+	public final static HeuristicStrategy euclidea = (start,end) -> 0.0;
 
 	public static void main(String[] args) {
 		final int pixelsPerCell = 20;
@@ -25,7 +35,7 @@ public class App {
 
 
 		app.pcg(new pcg.Random());
-		app.pathfinding(new pathfinding.DFS(), null);
+		app.pathfinding(new pathfinding.DFS(), null/*manhattan*/);
 	}
 
 }

@@ -10,17 +10,8 @@ import environment.MapApp;
  * @author Pablo Ramos
  *
  */
-//Speed: Propiedad de la clase Map. Permite ajustar la velocidad en la que avanza el pathfinding
-		// this.speed = 10; // Retardo de 10ms entre cada paso
 
 public interface PathfindingStrategy {
-	// Implementar heuristicas manhattan, chebyshev y euclidea
-	// Ejemplo de implementacion de la interfaz heuristica con una funcion lambda que devuelve coste 0.0
-	public final static HeuristicStrategy manhattan = (start,end) -> 0.0;
-	
-	public final static HeuristicStrategy chebyshev = (start,end) -> 0.0;
-	
-	public final static HeuristicStrategy euclidea = (start,end) -> 0.0;
 	
 	public void pathfind(Cell start, Cell end, HeuristicStrategy h, MapApp app);
 	// A implementar en cada una de las estrategias de busqueda (AStar.java, Dijkstra.java, etc)
